@@ -1,7 +1,16 @@
-function [outputArg1,outputArg2] = main(inputArg1,inputArg2)
-%MAIN Summary of this function goes here
-%   Detailed explanation goes here
-outputArg1 = inputArg1;
-outputArg2 = inputArg2;
-end
+close all
+clear
+clc
+
+% initilize plots
+set(0,'DefaultLineLineWidth',1.3)
+
+% add relevant paths
+addpath(genpath("..\documents"))
+addpath(genpath("..\functions"))
+addpath(genpath("..\environment"))
+
+NS12_footprint = NS12_model();
+
+
 

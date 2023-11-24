@@ -40,11 +40,15 @@ NS12_footprint.tip.equator_f.c = [0,0];
 NS12_footprint.tip.equator_f.r = AX2_center(1)+AX2_arm+AX3_arm+tip_thick;
 NS12_footprint.tip.equator_b.c = [0,0];
 NS12_footprint.tip.equator_b.r = 1156.59; % directly from side view figure
+NS12_footprint.tip.equator_f.h = AX2_center(2);
+NS12_footprint.tip.equator_b.h = 900;     % directly from side view figure
 
 NS12_footprint.elbow.equator_f.c = [0,0];
 NS12_footprint.elbow.equator_f.r = AX2_arm+elbow_thick;
 NS12_footprint.elbow.equator_b.c = [0,0];
 NS12_footprint.elbow.equator_b.r = (AX2_arm+elbow_thick)*cosd(25);
+NS12_footprint.elbow.equator_f.h = AX2_center(2);
+NS12_footprint.elbow.equator_b.h = 600+(AX2_arm+elbow_thick)*sind(25);  
 
 
 % AX3 reachability with AX2 in [-60, 155]
@@ -141,8 +145,9 @@ NS12_footprint.elbow.MESH_180(:,:,3) = z;
 
 % TIP: acrch 1-3
 xx = []; yy = []; zz = [];
-for i = [3 1 2]
+for i = [3 1]
     theta = linspace(0,360,30);
+
     phi = 90-linspace(max(-90,NS12_footprint.tip.ranges(i,1)),min(90,NS12_footprint.tip.ranges(i,2)),30);
 
     [Theta, Phi] = meshgrid(theta, phi);

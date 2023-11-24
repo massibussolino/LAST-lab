@@ -10,6 +10,8 @@ addpath(genpath("..\documents"))
 addpath(genpath("..\functions"))
 addpath(genpath("..\environment"))
 
+
+
 NS12_footprint = NS12_model();
 
 

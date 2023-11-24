@@ -9,8 +9,8 @@ set(0,'defaultTextInterpreter','latex',...
     'DefaultAxesTickLabelInterpreter','latex',...
     'DefaultTextInterpreter','latex');
 
-addpath(genpath("\documents"))
-addpath(genpath("\functions"))
+addpath(genpath("documents"))
+addpath(genpath("functions"))
 
 %% Dimensions of Objects: user defined inputs
 

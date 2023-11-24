@@ -9,6 +9,9 @@ set(0,'defaultTextInterpreter','latex',...
     'DefaultAxesTickLabelInterpreter','latex',...
     'DefaultTextInterpreter','latex');
 
+addpath(genpath("\documents"))
+addpath(genpath("\functions"))
+
 %% Dimensions of Objects: user defined inputs
 
 % Tenda1 on the left side of the room

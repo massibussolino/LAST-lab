@@ -30,7 +30,7 @@ AX2_limits = -([+155,-60]-90); % angles transformed according to new reference f
 AX3_center = [300, 700];
 AX3_arm = 850.37;
 
-tip_thick = 120;
+tip_thick = 0;
 elbow_thick = 360;
 
 

@@ -1,0 +1,48 @@
+# This document collects the data of the environment elements for a given
+# testcase. 
+#
+# The reference frame used is right handed cartesian with the center coinciding
+# with the conjunction of the two tents at floor height. This point has coordinates
+# [220, 395, 0] from the bottom left corner of the room. (see [add ref])
+
+
+# testcase: Disposizione_02
+
+
+# ----------------------- tenda1 ---------------------------------
+# Dimension of the tenda1 element [x,y,z] in mm in the room reference frame
+tenda1x: 30
+tenda1y: 2500
+tenda1z: 3000
+tenda1_origin: [0, 0, 0]              # bottom left corner of the element expressed in the tents reference frame
+
+# ----------------------- tenda2 ---------------------------------
+# Dimension of the tenda1 element [x,y,z] in mm in the room reference frame
+tenda2x: 3000
+tenda2y: 30
+tenda2z: 3000
+tenda2_origin: [0, 0, 0]              # bottom left corner of the element expressed in the tents reference frame
+
+# ----------------------- diorama ---------------------------------
+# Dimension of the diorama  [x,y,z] in mm in the room reference frame
+dioramax: 80
+dioramay: 2400
+dioramaz: 2000
+diorama_origin: [560, 50 , 0]        # bottom left corner of the element expressed in the tents reference frame
+
+
+# ----------------------- floor ---------------------------------
+# Dimension of the floor  [x,y,z] in mm in the room reference frame
+floorx: 6230
+floory: 3000
+floorz: 10
+floor_origin: [-220, -395, 0]         # bottom left corner of the element expressed in the tents reference frame
+
+# ----------------------- Robot ---------------------------------
+# Position and orientation of the robotic arm
+robotPosx: 1800                       # expressed in the tents reference frame
+robotPosy: 1250                        # expressed in the tents reference frame
+robotPosz: 400
+robotAng: 180                          # facing direction of the robot [deg]
+
+

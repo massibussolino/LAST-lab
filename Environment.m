@@ -15,6 +15,19 @@ addpath(genpath("functions"))
 % Read the environment data of the defined testcase
 [EnvData] = ReadEnvironmentData('Disposizione_03.yml');
 
+
+% Plot1: 2D footprint of AX5 and AX3 on the XY plane
+% Plot2: 3D reachability surface of AX5 computed from the drawing with AX1
+%        in [-90 90]
+% Plot3: 3D reachability surface of AX5 computed from the drawing with AX1
+%        in [-180 180]
+% Plot4: 3D footprint surface of AX3 elbow computed from the drawing with AX1
+%        in [-90 90]
+% Plot5: 3D footprint surface of AX3 elbow computed from the drawing with AX1
+%        in [-180 180]
+% Plot6: 3D Operational area extracted from online available comau cad file
+% Plot7: 2D reachable area of the diorama by AX5
+
 % Extract structures and objects
 Tenda1 = EnvData.Tenda1;
 Tenda2 = EnvData.Tenda2;

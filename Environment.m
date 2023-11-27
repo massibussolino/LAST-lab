@@ -200,7 +200,7 @@ set(gcf,'Units','normalized','Position',[0.2, 0.3, 0.6, 0.5])
 %% DIORAMA coverage
 
 figure
-title("Diorama coverage")
+
 
 if EnvData.diorama.x > EnvData.diorama.y
 
@@ -234,6 +234,6 @@ else
 
 end
 
-
+title("Diorama coverage")
 
 

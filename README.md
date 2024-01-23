@@ -13,3 +13,8 @@ la dimensione in mm espressa in coordinate della stanza, e la poszione del
 vertice in basso a sinistra di ogni elemento. Del braccio devono essere 
 specificate la posizione e la rotazione azimuthale rispetto all'asse x della stanza.
 
+* ```RoomLayoutStl.m``` script matlab per la rappresentazione della posizione
+e degli ingombri del braccio rispetto al file stl della stanza con incluse le 
+gabbie. In questo caso gli assi sono centrati nell'angolo in basso a destra della
+stanza e non delle tende (non presenti nei file stl).
+

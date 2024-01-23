@@ -2,25 +2,25 @@ function [NS12_footprint] = NS12_model()
 
 
 % Read the screashot of the cad
-I = imread("NS12-185_sideview.PNG");
+%I = imread("NS12-185_sideview.PNG");
 
 %% Maximum footprint of the tip and elbow joint
 
 % Plot translate and scale the side view
-figure("Name","Ingombro tip e gomito AX3")
-Im = imshow(I(end:-1:1,end:-1:1,:)); hold on
-Im.AlphaData = 0.5;
+%figure("Name","Ingombro tip e gomito AX3")
+%Im = imshow(I(end:-1:1,end:-1:1,:)); hold on
+%Im.AlphaData = 0.5;
 
 % Scale factor to make the image compatible with the arm dimenstions
-scale_factor = 1850.37/394;
-Im.XData = (Im.XData-298)*scale_factor; %Change data if the image get changed
-Im.YData = (Im.YData-242)*scale_factor; %Change data if the image get changed
+%scale_factor = 1850.37/394;
+%Im.XData = (Im.XData-298)*scale_factor; %Change data if the image get changed
+%Im.YData = (Im.YData-242)*scale_factor; %Change data if the image get changed
 
 
-axis on; axis equal;
-xlim([min(Im.XData),max(Im.XData)]);
-ylim([min(Im.YData),max(Im.YData)]);
-set(gca,'XDir','reverse','YDir','normal','XAxisLocation','origin','YAxisLocation','origin')
+%axis on; axis equal;
+%xlim([min(Im.XData),max(Im.XData)]);
+%ylim([min(Im.YData),max(Im.YData)]);
+%set(gca,'XDir','reverse','YDir','normal','XAxisLocation','origin','YAxisLocation','origin')
 
 
 % Define relevant parmaeters
@@ -57,7 +57,7 @@ c = AX2_center;
 th = AX2_limits(1):0.01:AX2_limits(2)+5;
 xx = r*cosd(th)+c(1);
 yy = r*sind(th)+c(2);
-plot(xx,yy,'--b')
+%plot(xx,yy,'--b')
 
 NS12_footprint.elbow.centre = c;
 NS12_footprint.elbow.radius = r;
@@ -70,7 +70,7 @@ c = AX2_center;
 th = AX2_limits(1):0.01:AX2_limits(2);
 xx = r*cosd(th)+c(1);
 yy = r*sind(th)+c(2);
-plot(xx,yy,'--r')
+%plot(xx,yy,'--r')
 
 NS12_footprint.tip.centre(1,:) = c;
 NS12_footprint.tip.radius(1) = r;
@@ -82,7 +82,7 @@ c = [AX2_center(1)+AX2_arm*cosd(AX2_limits(2)),AX2_center(2)+AX2_arm*sind(AX2_li
 th = AX2_limits(2):0.01:270;
 xx = r*cosd(th)+c(1);
 yy = r*sind(th)+c(2);
-plot(xx,yy,'--r')
+%plot(xx,yy,'--r')
 
 NS12_footprint.tip.centre(2,:) = c;
 NS12_footprint.tip.radius(2) = r;
@@ -94,13 +94,13 @@ c = [AX2_center(1)+AX2_arm*cosd(AX2_limits(1)),AX2_center(2)+AX2_arm*sind(AX2_li
 th = AX2_limits(1):-0.01:-150;
 xx = r*cosd(th)+c(1);
 yy = r*sind(th)+c(2);
-plot(xx,yy,'--r')
+%plot(xx,yy,'--r')
 
 NS12_footprint.tip.centre(3,:) = c;
 NS12_footprint.tip.radius(3) = r;
 NS12_footprint.tip.ranges(3,:) = [-150, AX2_limits(1)];
 
-legend('elbow footprint','tip footprint')
+%legend('elbow footprint','tip footprint')
 
 
 % Compute the meshes for the 3D plot (+- 90 rotation)

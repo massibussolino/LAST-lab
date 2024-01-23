@@ -28,7 +28,7 @@ tenda2_origin: [0, 0, 0]              # bottom left corner of the element expres
 dioramax: 2400
 dioramay: 80
 dioramaz: 2000
-diorama_origin: [300, 1805, 0]        # bottom left corner of the element expressed in the tents reference frame
+diorama_origin: [210, 1805, 0]        # bottom left corner of the element expressed in the tents reference frame
 
 
 # ----------------------- floor ---------------------------------

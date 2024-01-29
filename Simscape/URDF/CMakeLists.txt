@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8.3)
 
-project(SMART NS 12-1,85_ARTICOLATO.SLDASM)
+project(SMART NS 12-1,85 ARC_040128.SLDASM)
 
 find_package(catkin REQUIRED)
 

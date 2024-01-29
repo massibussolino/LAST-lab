@@ -3,22 +3,22 @@
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
-  name="SMART NS 12-1,85_ARTICOLATO.SLDASM">
+  name="SMART NS 12-1,85 ARC_040128.SLDASM">
   <link
-    name="LinkBase">
+    name="BaseLink">
     <inertial>
       <origin
-        xyz="0.0744476654482306 0.115913824172212 0.0010678170884798"
+        xyz="0.0744476654482305 0.115913824172212 0.00106781708847979"
         rpy="0 0 0" />
       <mass
-        value="49.7889558845622" />
+        value="390.843303693814" />
       <inertia
-        ixx="0.87523928869254"
-        ixy="0.0450449821195637"
-        ixz="0.0221675978946128"
-        iyy="2.13115026033701"
-        iyz="-0.0128402770154969"
-        izz="1.73800152420485" />
+        ixx="6.87062841623644"
+        ixy="0.353603109638576"
+        ixz="0.174015643472711"
+        iyy="16.7295295436455"
+        iyz="-0.100796174571651"
+        izz="13.643311965008" />
     </inertial>
     <visual>
       <origin
@@ -26,7 +26,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://SMART NS 12-1,85_ARTICOLATO.SLDASM/meshes/LinkBase.STL" />
+          filename="package://SMART NS 12-1,85 ARC_040128.SLDASM/meshes/BaseLink.STL" />
       </geometry>
       <material
         name="">
@@ -40,7 +40,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://SMART NS 12-1,85_ARTICOLATO.SLDASM/meshes/LinkBase.STL" />
+          filename="package://SMART NS 12-1,85 ARC_040128.SLDASM/meshes/BaseLink.STL" />
       </geometry>
     </collision>
   </link>
@@ -48,17 +48,17 @@
     name="Link1">
     <inertial>
       <origin
-        xyz="-0.106502056199313 0.202309935280237 1.7748990398715E-05"
+        xyz="-0.1065 0.20231 1.7749E-05"
         rpy="0 0 0" />
       <mass
-        value="45.9345542594997" />
+        value="360.59" />
       <inertia
-        ixx="0.558230706491936"
-        ixy="0.140748891667565"
-        ixz="-0.0150260133538752"
-        iyy="1.0571184929808"
-        iyz="0.0210703300466004"
-        izz="0.996343838581334" />
+        ixx="4.3821"
+        ixy="1.1049"
+        ixz="-0.11795"
+        iyy="8.2984"
+        iyz="0.1654"
+        izz="7.8213" />
     </inertial>
     <visual>
       <origin
@@ -66,12 +66,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://SMART NS 12-1,85_ARTICOLATO.SLDASM/meshes/Link1.STL" />
+          filename="package://SMART NS 12-1,85 ARC_040128.SLDASM/meshes/Link1.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          rgba="1 0 0 1" />
       </material>
     </visual>
     <collision>
@@ -80,7 +80,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://SMART NS 12-1,85_ARTICOLATO.SLDASM/meshes/Link1.STL" />
+          filename="package://SMART NS 12-1,85 ARC_040128.SLDASM/meshes/Link1.STL" />
       </geometry>
     </collision>
   </link>
@@ -91,7 +91,7 @@
       xyz="0 0 0.251"
       rpy="1.5708 0 0" />
     <parent
-      link="LinkBase" />
+      link="BaseLink" />
     <child
       link="Link1" />
     <axis
@@ -101,17 +101,17 @@
     name="Link2">
     <inertial>
       <origin
-        xyz="0.0125874045135702 0.287861223589356 -0.10476726513625"
+        xyz="0.012587 0.28786 -0.10477"
         rpy="0 0 0" />
       <mass
-        value="7.51128820326683" />
+        value="58.964" />
       <inertia
-        ixx="0.49847614415948"
-        ixy="-0.00984951243183954"
-        ixz="0.00318186428508749"
-        iyy="0.0609511647723986"
-        iyz="0.0500300030481755"
-        izz="0.504104875138674" />
+        ixx="3.913"
+        ixy="-0.077319"
+        ixz="0.024977"
+        iyy="0.47847"
+        iyz="0.39274"
+        izz="3.9572" />
     </inertial>
     <visual>
       <origin
@@ -119,7 +119,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://SMART NS 12-1,85_ARTICOLATO.SLDASM/meshes/Link2.STL" />
+          filename="package://SMART NS 12-1,85 ARC_040128.SLDASM/meshes/Link2.STL" />
       </geometry>
       <material
         name="">
@@ -133,7 +133,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://SMART NS 12-1,85_ARTICOLATO.SLDASM/meshes/Link2.STL" />
+          filename="package://SMART NS 12-1,85 ARC_040128.SLDASM/meshes/Link2.STL" />
       </geometry>
     </collision>
   </link>
@@ -142,7 +142,7 @@
     type="continuous">
     <origin
       xyz="-0.3 0.349 -0.101"
-      rpy="0 0 -7.8035E-05" />
+      rpy="0 0 0" />
     <parent
       link="Link1" />
     <child
@@ -154,17 +154,17 @@
     name="Link3">
     <inertial>
       <origin
-        xyz="-0.0492113438257876 0.137646138939903 0.0901608936893595"
+        xyz="-0.0492113438257874 0.137646138939902 0.0901608936893602"
         rpy="0 0 0" />
       <mass
-        value="21.7051384673217" />
+        value="170.385336968475" />
       <inertia
-        ixx="0.349281508240108"
-        ixy="0.0493962728607473"
-        ixz="0.0374156716422658"
-        iyy="0.232073169225388"
-        iyz="-0.0773152258110867"
-        izz="0.305153657761036" />
+        ixx="2.74185983968485"
+        ixy="0.387760741956867"
+        ixz="0.293713022391787"
+        iyy="1.82177437841929"
+        iyz="-0.606924522617031"
+        izz="2.39545621342414" />
     </inertial>
     <visual>
       <origin
@@ -172,12 +172,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://SMART NS 12-1,85_ARTICOLATO.SLDASM/meshes/Link3.STL" />
+          filename="package://SMART NS 12-1,85 ARC_040128.SLDASM/meshes/Link3.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          rgba="1 0 0 1" />
       </material>
     </visual>
     <collision>
@@ -186,7 +186,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://SMART NS 12-1,85_ARTICOLATO.SLDASM/meshes/Link3.STL" />
+          filename="package://SMART NS 12-1,85 ARC_040128.SLDASM/meshes/Link3.STL" />
       </geometry>
     </collision>
   </link>
@@ -195,7 +195,7 @@
     type="continuous">
     <origin
       xyz="0 0.7 0"
-      rpy="0 0 7.8035E-05" />
+      rpy="0 0 0" />
     <parent
       link="Link2" />
     <child
@@ -207,17 +207,17 @@
     name="Link4">
     <inertial>
       <origin
-        xyz="-0.415787044063144 -3.64732634383635E-06 -0.00842206225376062"
+        xyz="-0.41579 -3.6473E-06 -0.0084221"
         rpy="0 0 0" />
       <mass
-        value="5.72544149128189" />
+        value="44.945" />
       <inertia
-        ixx="0.0230856306362713"
-        ixy="7.37368732479341E-07"
-        ixz="-0.000920611326172965"
-        iyy="0.0669736432330281"
-        iyz="4.08740356108042E-07"
-        izz="0.0522796432807985" />
+        ixx="0.18122"
+        ixy="5.7883E-06"
+        ixz="-0.0072268"
+        iyy="0.52574"
+        iyz="3.2086E-06"
+        izz="0.4104" />
     </inertial>
     <visual>
       <origin
@@ -225,12 +225,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://SMART NS 12-1,85_ARTICOLATO.SLDASM/meshes/Link4.STL" />
+          filename="package://SMART NS 12-1,85 ARC_040128.SLDASM/meshes/Link4.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          rgba="1 0 0 1" />
       </material>
     </visual>
     <collision>
@@ -239,7 +239,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://SMART NS 12-1,85_ARTICOLATO.SLDASM/meshes/Link4.STL" />
+          filename="package://SMART NS 12-1,85 ARC_040128.SLDASM/meshes/Link4.STL" />
       </geometry>
     </collision>
   </link>
@@ -260,17 +260,17 @@
     name="Link5">
     <inertial>
       <origin
-        xyz="-0.0417593366580946 2.64366311861775E-05 -0.00106287342119625"
+        xyz="-0.0417593366585804 2.64362911670535E-05 -0.00106287346441888"
         rpy="0 0 0" />
       <mass
-        value="0.559213536738551" />
+        value="4.38982627500557" />
       <inertia
-        ixx="0.000416038661835265"
-        ixy="-6.07198817068019E-07"
-        ixz="2.00491794899905E-05"
-        iyy="0.000988804723892516"
-        iyz="5.3708654552333E-07"
-        izz="0.000978864012499071" />
+        ixx="0.00326590350076518"
+        ixy="-4.76651191579561E-06"
+        ixz="0.000157386056054739"
+        iyy="0.00776211709964979"
+        iyz="4.21608948038967E-06"
+        izz="0.00768408248717458" />
     </inertial>
     <visual>
       <origin
@@ -278,7 +278,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://SMART NS 12-1,85_ARTICOLATO.SLDASM/meshes/Link5.STL" />
+          filename="package://SMART NS 12-1,85 ARC_040128.SLDASM/meshes/Link5.STL" />
       </geometry>
       <material
         name="">
@@ -292,7 +292,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://SMART NS 12-1,85_ARTICOLATO.SLDASM/meshes/Link5.STL" />
+          filename="package://SMART NS 12-1,85 ARC_040128.SLDASM/meshes/Link5.STL" />
       </geometry>
     </collision>
   </link>
@@ -301,7 +301,7 @@
     type="continuous">
     <origin
       xyz="-0.592 0 0"
-      rpy="0 0 0.016135" />
+      rpy="0 0 0" />
     <parent
       link="Link4" />
     <child
@@ -310,20 +310,20 @@
       xyz="0 0 1" />
   </joint>
   <link
-    name="LinkEE">
+    name="Link6">
     <inertial>
       <origin
-        xyz="-0.0163767177775365 -0.00130113388648864 3.25512854655319E-05"
+        xyz="-0.0148549427534164 -0.00130113394450015 3.25513187997979E-05"
         rpy="0 0 0" />
       <mass
-        value="0.0919593711752515" />
+        value="0.721881062345406" />
       <inertia
-        ixx="9.41339688883517E-05"
-        ixy="3.24948856414075E-07"
-        ixz="-3.55096500022067E-08"
-        iyy="5.33523250768208E-05"
-        iyz="-3.89486534784878E-09"
-        izz="4.92478459379895E-05" />
+        ixx="0.000738951655222946"
+        ixy="2.55084893274034E-06"
+        ixz="-2.78751313119689E-07"
+        iyy="0.000418815751052622"
+        iyz="-3.05758419040228E-08"
+        izz="0.000386595590201194" />
     </inertial>
     <visual>
       <origin
@@ -331,7 +331,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://SMART NS 12-1,85_ARTICOLATO.SLDASM/meshes/LinkEE.STL" />
+          filename="package://SMART NS 12-1,85 ARC_040128.SLDASM/meshes/Link6.STL" />
       </geometry>
       <material
         name="">
@@ -345,7 +345,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://SMART NS 12-1,85_ARTICOLATO.SLDASM/meshes/LinkEE.STL" />
+          filename="package://SMART NS 12-1,85 ARC_040128.SLDASM/meshes/Link6.STL" />
       </geometry>
     </collision>
   </link>
@@ -353,12 +353,12 @@
     name="Ax6"
     type="continuous">
     <origin
-      xyz="-0.092478 0 0"
-      rpy="-1.5434 0 0" />
+      xyz="-0.094 0 0"
+      rpy="0 0 0" />
     <parent
       link="Link5" />
     <child
-      link="LinkEE" />
+      link="Link6" />
     <axis
       xyz="1 0 0" />
   </joint>

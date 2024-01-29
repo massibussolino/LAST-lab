@@ -3,7 +3,7 @@
     name="model" />
   <param
     name="robot_description"
-    textfile="$(find SMART NS 12-1,85_ARTICOLATO.SLDASM)/urdf/SMART NS 12-1,85_ARTICOLATO.SLDASM.urdf" />
+    textfile="$(find SMART NS 12-1,85 ARC_040128.SLDASM)/urdf/SMART NS 12-1,85 ARC_040128.SLDASM.urdf" />
   <node
     name="joint_state_publisher_gui"
     pkg="joint_state_publisher_gui"
@@ -16,5 +16,5 @@
     name="rviz"
     pkg="rviz"
     type="rviz"
-    args="-d $(find SMART NS 12-1,85_ARTICOLATO.SLDASM)/urdf.rviz" />
+    args="-d $(find SMART NS 12-1,85 ARC_040128.SLDASM)/urdf.rviz" />
 </launch>

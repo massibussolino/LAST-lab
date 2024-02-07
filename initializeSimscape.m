@@ -2,11 +2,11 @@
 clearvars ; close all ; clc ;
 
 % Simulation options
-opts.simTime = 10 ; % [s] - Simulation time
-opts.AbsTol = 1e-10 ;
-opts.RelTol = 1e-10 ;
-opts.gravity = [0,0,-9.81] ;
-opts.autoCompensateGravity = true ;
+opts.simTime = 2 ; % [s] - Simulation time
+opts.AbsTol = 1e-10 ; % [-]
+opts.RelTol = 1e-10 ; % [-]
+opts.gravity = [0,0,-9.81] ; % [m/s^2]
+opts.autoCompensateGravity = true ; % When set to true, gravity compensation torques are automatically generated and added to control input.
 
 % Add required paths
 addpath(genpath(fullfile('Simscape','SPART-master'))) ;
@@ -21,14 +21,10 @@ robot_rigidBodyTree.Gravity = opts.gravity ; % [m/s^2] - Define gravity used for
 robot.Pos_mm = [2200, 1000, 0] ; % [mm] - Position of robot in LaST room
 
 % Robot joint initial conditions
-robot.ic.ang =    [30, 30, 30, 30, 30, 30] ; % [deg]
-robot.ic.angvel = [0, 0, 0, 0, 0, 0] ;   % [deg/s]
-robot.ic.r0 = robot.Pos_mm'/1000 ; % [m] - Converted from mm
-robot.ic.R0 = eye(3) ; % [rad]
-
-% Reference trajectory initial conditions
-trajectoryRef.ic.r0 = robot.ic.r0 ;
-trajectoryRef.ic.R0 = robot.ic.R0 ;
+robot.ic.ang = [45, 0, 45, 0, 45, 0] ; % [deg]
+robot.ic.angvel = zeros(6,1) ;   % [deg/s]
+robot.ic.r0 = robot.Pos_mm'/1000 ; % [m] - Position of robot base in LaST room 
+robot.ic.R0 = eye(3) ; % [rad] - Attitude of robot base in LaST room
 
 % Compute initial end-effector state
 [ ~, RL, rJ, rL, e, g ] = Kinematics( robot.ic.R0, robot.ic.r0, deg2rad(robot.ic.ang), robotURDF ) ;
@@ -40,3 +36,11 @@ R_ee0 = RL(1:3, 1:3, end) ; % [rad]
 v_ee0 = tL(4:6,end) ; % [m/s]
 w_ee0 = tL(1:3,end) ; % [rad/s]
 
+%
+% [J0_ee, Jm_ee] = Jacob(p_ee0, robot.ic.r0, rL, P0, pm, robotURDF.n_links_joints, robotURDF) ;
+%[~, ~]=Jacobdot(rL(1:3,end),tL(1:6,end),r0,t0,rL,tL,P0,pm,robot.n_links_joints,robot) ;
+
+
+% End-effector reference trajectory initial conditions
+trajectoryRef.ic.r0 = p_ee0 ; 
+trajectoryRef.ic.R0 = R_ee0 ; 

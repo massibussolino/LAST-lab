@@ -40,12 +40,10 @@ w_ee0 = tL(1:3,end) ; % [rad/s]
 r_target = [0.5;robot.ic.r0(2);0.5] ;
 
 R_desired = eye(3) ;
-r_desired = [robot.ic.r0(1)+0.5;robot.ic.r0(2)+0.5;0.5] ;
+r_desired = [robot.ic.r0(1)+0.5;0;0.5] ;
 T = [R_desired, r_desired; 0, 0, 0 1] ;
 
-r_rel = r_desired - r_target 
-
-norm(r_rel)
+norm(r_desired - r_target)
 
 % End-effector reference trajectory initial conditions
 trajectoryRef.ic.r0 = p_ee0 ; 

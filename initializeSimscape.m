@@ -37,15 +37,23 @@ v_ee0 = tL(4:6,end) ; % [m/s]
 w_ee0 = tL(1:3,end) ; % [rad/s]
 
 % Target position
-r_target = [0.5;robot.ic.r0(2);0.5] ;
+r_target = [0.5; robot.ic.r0(2); 0.5] ;
 
-R_desired = eye(3) ;
-r_desired = [robot.ic.r0(1)+0.5;robot.ic.r0(2)+0.5;0.5] ;
-T = [R_desired, r_desired; 0, 0, 0 1] ;
+% Desired tip position
+r_relative_desired = [0.5; 0.5; 1] ;
+r_desired_inertial = robot.ic.r0 + r_relative_desired ;
 
-r_rel = r_desired - r_target 
+% Desired tip attitude
+R_x = normalize(r_desired_inertial-r_target,'norm') ;
+R_z = [0;0;1] ;
+R_y = normalize(cross(R_z,R_x),'norm') ;
+R_z = normalize(cross(R_x,R_y),'norm') ;
 
-norm(r_rel)
+R_desired = [R_x,R_y,R_z];
+T = [R_desired, r_desired_inertial; 0, 0, 0 1] ;
+
+% Distance between target and tip
+norm(r_desired_inertial-r_target)
 
 % End-effector reference trajectory initial conditions
 trajectoryRef.ic.r0 = p_ee0 ; 
